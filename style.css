@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --dark: #023047;
+  --light: #f1faee;
+  --dark-bg: #01141d;
+  --light-bg: #ffffff;
+  --logo: #fd5e5e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  height: 100vh;
+}
+body.dark-mode {
+  --light: #023047;
+  --dark: #f1faee;
+  --light-bg: #01141d;
+  --dark-bg: #ffffff;
+}
+.container {
+  width: 1166px;
+  margin: 0 auto;
+}
+.nav-container {
+  width: 1166px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  margin: 34px;
+}
+.nav-container .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--logo);
+}
+.nav-container .right {
+  display: flex;
+  align-items: center;
+}
+.nav-container .menu-items a {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+  margin-right: 70px;
+  display: inline-block;
+  transition: all 500ms;
+}
+.nav-container .menu-items a:hover {
+  transform: translateY(-2px);
+}
+.nav-container .menu-items a.btn {
+  padding: 8px 32px;
+}
+/* buttons */
+a.btn {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+  padding: 12px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+a.btn.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+a.btn.light {
+  background-color: var(--light);
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+/* dark/light switches */
+.nav-container .dark-switch,
+.nav-container .light-switch {
+  position: absolute;
+  right: 0;
+  transform: translateY(-16px);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  display: flex;
+  transition: all 500ms;
+}
+.nav-container .dark-switch.active,
+.nav-container .light-switch.active {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+.hero-section.right {
+  align-self: flex-end;
+}
+.hero-section .right img {
+  height: 100vh;
+  vertical-align: middle;
+}
+
+.hero-section h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--dark);
+  width: 587px;
+  margin-bottom: 16px;
+  margin-top: 60px;
+}
+.hero-section p.sub-heading {
+  font-size: 20px;
+  color: var(--dark);
+  width: 587px;
+}
+.hero-section a.btn {
+  margin-top: 20px;
+  margin-right: 42px;
+}
